@@ -1,13 +1,13 @@
-import Cart from "./components/Cart/Cart";
-import Layout from "./components/Layout/Layout";
-import Products from "./components/Shop/Products";
+import { Route, Routes } from 'react-router-dom';
+import Admin from './components/Admin/Admin';
+import Home from './components/Cart/Home';
 
 function App() {
   return (
-    <Layout>
-      <Cart />
-      <Products />
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="admin" element={<Admin />} />
+    </Routes>
   );
 }
 

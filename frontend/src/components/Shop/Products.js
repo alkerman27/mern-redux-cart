@@ -9,7 +9,7 @@ import {
 import ProductItem from './ProductItem';
 import classes from './Products.module.css';
 
-const Products = () => {
+const Products = ({ title }) => {
   const dispatch = useDispatch();
   const effectRef = useRef(false);
   const product = useSelector(showAllProduct);
@@ -46,7 +46,7 @@ const Products = () => {
 
   return (
     <section className={classes.products}>
-      <h2>Buy your favorite products</h2>
+      <h2>{title}</h2>
       <ul>{content}</ul>
     </section>
   );
